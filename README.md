@@ -4,19 +4,19 @@ A simple, functional MERN stack web application built for retail inventory track
 
 ---
 
-## 🌟 Key Features (Core 40%–50% Scope)
+## 🌟 Key Features
 
-1. **Inventory Management**:
-   - Add new products with name, category, price, quantity, and minimum stock threshold.
-   - Real-time stock status badge: `In Stock`, `Low Stock` (when quantity $\le$ threshold), and `Out of Stock`.
-2. **Two User Roles**:
-   - **Admin**: Can add new products, restock items (+5 units), and delete products.
-   - **Cashier**: Can record sales (-1 unit) to deduct stock directly.
+1. **Authentication & Roles**:
+   - Secure JWT-based Login and Registration.
+   - Role-based capabilities for **Admin** (catalog management, restock, deletion) and **Cashier** (sales & stock deductions).
+2. **Inventory Management**:
+   - Add and track products with name, category, price, quantity, and minimum stock threshold.
+   - Dynamic stock status badge: `In Stock`, `Low Stock` (when quantity $\le$ threshold), and `Out of Stock`.
 3. **Core Business Rule**:
-   - Server-side check that prevents selling if available stock is insufficient (`400 Bad Request`).
+   - Server-side validation that prevents selling if available stock is insufficient (`400 Bad Request`).
 4. **Summary Dashboard**:
    - Live count of Total Products, Total Units in stock, and Low Stock alerts.
-5. **Stock History**:
+5. **Stock Transaction History**:
    - Linked transaction log tracking date, product name, action type (`SALE` / `RESTOCK`), and quantity.
 
 ---
