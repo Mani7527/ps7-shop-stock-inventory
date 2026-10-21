@@ -4,6 +4,14 @@ A simple, functional MERN stack web application built for retail inventory track
 
 ---
 
+## 🔗 Live Links
+
+- **Frontend (Vercel)**: [https://ps7-shop-stock-inventory.vercel.app/](https://ps7-shop-stock-inventory.vercel.app/)
+- **Backend (Render)**: [https://ps7-shop-stock-inventory.onrender.com](https://ps7-shop-stock-inventory.onrender.com)
+- **GitHub Repository**: [https://github.com/Mani7527/ps7-shop-stock-inventory](https://github.com/Mani7527/ps7-shop-stock-inventory)
+
+---
+
 ## 🌟 Key Features
 
 1. **Authentication & Roles**:
@@ -64,17 +72,18 @@ Assignment-6/
 
 ## 🚀 Getting Started
 
-### 1. Server Setup
+### 1. Backend Setup
 
 ```bash
-cd server
+cd backend
 npm install
 ```
 
-Create `.env` inside `server/` (optional, defaults to local MongoDB):
+Create `.env` inside `backend/`:
 ```env
-PORT=5000
+PORT=5001
 MONGO_URI=mongodb+srv://<user>:<password>@cluster0.mongodb.net/shop_inventory
+JWT_SECRET=shopsecretkey123
 ```
 
 (Optional) Seed sample data:
@@ -86,18 +95,18 @@ Start the backend server:
 ```bash
 npm start
 ```
-Server runs on: `http://localhost:5000`
+Backend runs on: `http://localhost:5001`
 
 ---
 
-### 2. Client Setup
+### 2. Frontend Setup
 
 ```bash
-cd ../client
+cd ../frontend
 npm install
 npm run dev
 ```
-Client runs on: `http://localhost:3000`
+Frontend runs on: `http://localhost:3000`
 
 ---
 
@@ -105,6 +114,8 @@ Client runs on: `http://localhost:3000`
 
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
+| `POST` | `/api/auth/register` | Register new user (Admin / Cashier) |
+| `POST` | `/api/auth/login` | Authenticate and get JWT token |
 | `GET` | `/api/products` | Get list of all products |
 | `POST` | `/api/products` | Add a new product |
 | `POST` | `/api/products/:id/adjust` | Record a Sale or Restock |
