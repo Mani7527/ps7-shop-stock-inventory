@@ -40,7 +40,7 @@ body {
 }
 
 .nav-links a.active {
-  color: #007bff;
+  color: #2563eb;
   font-weight: bold;
 }
 
@@ -118,24 +118,24 @@ button {
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: #2563eb;
   color: white;
 }
 
 .btn-sell {
-  background-color: #28a745;
+  background-color: #059669;
   color: white;
   padding: 6px 12px;
 }
 
 .btn-restock {
-  background-color: #ffc107;
-  color: #222;
+  background-color: #d97706;
+  color: white;
   padding: 6px 12px;
 }
 
 .btn-delete {
-  background-color: #dc3545;
+  background-color: #e11d48;
   color: white;
   padding: 6px 10px;
 }
@@ -159,25 +159,51 @@ th {
 }
 
 .badge {
-  padding: 4px 8px;
-  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 12px;
   font-size: 12px;
   font-weight: 600;
 }
 
+.badge::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
 .badge-in {
-  background-color: #d4edda;
-  color: #155724;
+  background-color: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.badge-in::before {
+  background-color: #059669;
 }
 
 .badge-low {
-  background-color: #fff3cd;
-  color: #856404;
+  background-color: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.badge-low::before {
+  background-color: #d97706;
 }
 
 .badge-out {
-  background-color: #f8d7da;
-  color: #721c24;
+  background-color: #fff1f2;
+  color: #be123c;
+  border: 1px solid #fecdd3;
+}
+
+.badge-out::before {
+  background-color: #e11d48;
 }
 
 .actions {
